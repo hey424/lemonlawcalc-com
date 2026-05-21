@@ -1,0 +1,12 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Methodology | lemonlawcalc.com';
+const description = 'How the lemon law calculator estimates refunds: mileage offset calculation, qualification thresholds, and outcome types.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Methodology</h1>
+  <p><em>Reviewed by Aspen Lockwood (AL), Editor-in-Chief. Updated May 2026.</em></p>
+  <h2>Mileage offset</h2><p>Using California&rsquo;s formula as the base: (miles driven before defect arose / 120,000) × purchase price. This is the most common formula; some states use different denominators or no offset at all. The calculator uses current mileage minus purchase mileage as a proxy for pre-defect miles.</p>
+  <h2>Qualification thresholds</h2><p>Calculator applies the most common state standards: 3+ repair attempts for major defects, 1+ for safety defects, or 30+ days out of service. If none of these thresholds are met, the calculator flags that the vehicle may not qualify yet.</p>
+  <h2>Outcome adjustments</h2><p>Refund: purchase price minus mileage offset (±15% range for state law variation). Replacement: ~95% of purchase price (manufacturers may offer slightly less valuable replacement). Cash settlement: ~60% of net refund basis (cash settlements are typically discounted vs. full repurchase).</p>
+</BaseLayout>
