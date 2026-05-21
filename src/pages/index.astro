@@ -1,0 +1,74 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Lemon Law Calculator | lemonlawcalc.com';
+const description = 'Estimate your lemon law refund, repurchase value, or replacement value for a defective vehicle. Covers federal Magnuson-Moss and state lemon laws. Free, informational.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Lemon Law Calculator</h1>
+  <p><em>Reviewed by Aspen Lockwood (AL), Editor-in-Chief. Updated May 2026.</em></p>
+  <p>State lemon laws and the federal Magnuson-Moss Warranty Act protect consumers who purchase defective vehicles. When a manufacturer or dealer cannot fix a substantial defect after a reasonable number of repair attempts, the consumer may be entitled to a full refund, replacement vehicle, or cash settlement. Most states also require manufacturers to pay attorney fees if you win. This calculator estimates your potential recovery.</p>
+  <h2>Run the estimate</h2>
+  <form id="calc" novalidate>
+    <label for="purchase-price">Original purchase price (USD)</label>
+    <input id="purchase-price" type="number" value="35000" min="0" />
+    <label for="miles-at-purchase">Mileage at purchase</label>
+    <input id="miles-at-purchase" type="number" value="0" min="0" />
+    <label for="current-miles">Current mileage</label>
+    <input id="current-miles" type="number" value="12000" min="0" />
+    <label for="repair-attempts">Number of repair attempts for the same defect</label>
+    <input id="repair-attempts" type="number" value="3" min="0" max="20" />
+    <label for="days-out-of-service">Total days vehicle has been out of service for repairs</label>
+    <input id="days-out-of-service" type="number" value="30" min="0" />
+    <label for="defect-type">Defect type</label>
+    <select id="defect-type">
+      <option value="safety">Safety defect (brakes, steering, engine stall)</option>
+      <option value="major">Major non-safety defect (transmission, AC, electrical)</option>
+      <option value="minor">Minor defect (cosmetic, minor comfort/convenience)</option>
+    </select>
+    <label for="outcome">Desired outcome</label>
+    <select id="outcome">
+      <option value="refund">Full refund (repurchase)</option>
+      <option value="replacement">Replacement vehicle</option>
+      <option value="cash">Cash settlement</option>
+    </select>
+    <button type="submit">Estimate recovery</button>
+  </form>
+  <p id="result" aria-live="polite"></p>
+  <h2>How lemon law claims work</h2>
+  <p>Most state lemon laws require the manufacturer to repurchase or replace the vehicle if: (1) the vehicle has a substantial defect covered by the warranty; (2) the manufacturer has had a reasonable number of repair attempts (typically 3–4 for the same defect, or 1–2 for safety defects); and (3) the defect arose within the lemon law period (usually 1–2 years or 12,000–18,000 miles from delivery). A mileage offset is deducted from the refund for miles driven before the defect arose.</p>
+  <h2>Where to learn more</h2>
+  <p>See <a href="/guides/how-lemon-law-works">how lemon law works</a>, <a href="/guides/lemon-law-by-state">lemon law by state</a>, <a href="/guides/what-to-do-with-a-lemon">what to do with a lemon</a>, and <a href="/guides/lemon-law-misconceptions">common lemon law misconceptions</a>.</p>
+  <script>
+    document.getElementById('calc').addEventListener('submit', e => {
+      e.preventDefault();
+      const price = parseFloat(document.getElementById('purchase-price').value)||35000;
+      const milesAtPurchase = parseFloat(document.getElementById('miles-at-purchase').value)||0;
+      const currentMiles = parseFloat(document.getElementById('current-miles').value)||0;
+      const repairs = parseFloat(document.getElementById('repair-attempts').value)||0;
+      const daysOut = parseFloat(document.getElementById('days-out-of-service').value)||0;
+      const defect = document.getElementById('defect-type').value;
+      const outcome = document.getElementById('outcome').value;
+      // Mileage offset: (miles driven / 120000) * purchase price (CA formula; varies by state)
+      const milesDriven = Math.max(0, currentMiles - milesAtPurchase);
+      const mileageOffset = (milesDriven / 120000) * price;
+      const refundBase = price - mileageOffset;
+      // Qualify check
+      const qualifies = (defect==='safety' && repairs>=1) || (defect==='major' && repairs>=3) || daysOut>=30;
+      const fmt = n=>'$'+Math.round(n).toLocaleString();
+      if (!qualifies) {
+        document.getElementById('result').innerHTML = `<strong>May not qualify yet</strong><br>Most states require 3–4 repair attempts (or 1–2 for safety defects) or 30+ days out of service. Document all repair visits and continue asserting warranty rights.<br><em>Consult a lemon law attorney — many offer free case evaluations.</em>`;
+        return;
+      }
+      let estimate;
+      if (outcome==='refund') {
+        estimate = refundBase;
+      } else if (outcome==='replacement') {
+        estimate = price * 0.95; // near-full value; depends on state
+      } else {
+        estimate = refundBase * 0.6; // cash settlement typically less than full refund
+      }
+      document.getElementById('result').innerHTML =
+        `<strong>Estimated recovery: ${fmt(estimate*0.85)} &ndash; ${fmt(estimate*1.1)}</strong><br>Purchase price: ${fmt(price)} &bull; Mileage offset: ${fmt(mileageOffset)} &bull; Net refund basis: ${fmt(refundBase)}<br><em>Most states require manufacturers to pay attorney fees in successful lemon law cases — hire a lemon law attorney at no out-of-pocket cost.</em>`;
+    });
+  </script>
+</BaseLayout>
