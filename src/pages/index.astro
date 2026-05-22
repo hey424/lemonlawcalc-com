@@ -1,13 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'Lemon Law Calculator | lemonlawcalc.com';
-const description = 'Estimate your lemon law refund, repurchase value, or replacement value for a defective vehicle. Covers federal Magnuson-Moss and state lemon laws. Free, informational.';
+const description = 'Estimate your lemon law refund, repurchase value, or replacement value for a defective vehicle under state lemon law or federal Magnuson-Moss. Free, informational.';
 ---
 <BaseLayout title={title} description={description}>
   <h1>Lemon Law Calculator</h1>
-  <p><em>Reviewed by Aspen Lockwood (AL), Editor-in-Chief. Updated May 2026.</em></p>
-  <p>State lemon laws and the federal Magnuson-Moss Warranty Act protect consumers who purchase defective vehicles. When a manufacturer or dealer cannot fix a substantial defect after a reasonable number of repair attempts, the consumer may be entitled to a full refund, replacement vehicle, or cash settlement. Most states also require manufacturers to pay attorney fees if you win. This calculator estimates your potential recovery.</p>
-  <h2>Run the estimate</h2>
+  <p><em>Reviewed by Elodie Sark (ES), Editor-in-Chief &mdash; Consumer Protection & Lemon Law Practice. Updated May 2026.</em></p>
+  <p>State lemon laws and the federal Magnuson-Moss Warranty Act protect consumers who purchase or lease defective vehicles. When a manufacturer cannot fix a substantial defect after a reasonable number of repair attempts — or when the vehicle has been out of service for 30 or more cumulative days — the consumer may be entitled to a full refund, a replacement vehicle, or a negotiated cash settlement. Virtually all state lemon laws also require the manufacturer to pay the consumer&rsquo;s attorney fees if the consumer prevails, making legal representation effectively free in successful cases. This calculator estimates your potential recovery based on your purchase price, mileage, repair history, and desired outcome.</p>
+
+  <h2>Run the Estimate</h2>
   <form id="calc" novalidate>
     <label for="purchase-price">Original purchase price (USD)</label>
     <input id="purchase-price" type="number" value="35000" min="0" />
@@ -34,10 +35,41 @@ const description = 'Estimate your lemon law refund, repurchase value, or replac
     <button type="submit">Estimate recovery</button>
   </form>
   <p id="result" aria-live="polite"></p>
-  <h2>How lemon law claims work</h2>
-  <p>Most state lemon laws require the manufacturer to repurchase or replace the vehicle if: (1) the vehicle has a substantial defect covered by the warranty; (2) the manufacturer has had a reasonable number of repair attempts (typically 3–4 for the same defect, or 1–2 for safety defects); and (3) the defect arose within the lemon law period (usually 1–2 years or 12,000–18,000 miles from delivery). A mileage offset is deducted from the refund for miles driven before the defect arose.</p>
-  <h2>Where to learn more</h2>
-  <p>See <a href="/guides/how-lemon-law-works">how lemon law works</a>, <a href="/guides/lemon-law-by-state">lemon law by state</a>, <a href="/guides/what-to-do-with-a-lemon">what to do with a lemon</a>, and <a href="/guides/lemon-law-misconceptions">common lemon law misconceptions</a>.</p>
+
+  <h2>How Lemon Law Claims Work</h2>
+  <p>Lemon law gives consumers a legal remedy when a manufacturer cannot fix a substantial defect in a vehicle that the consumer is entitled to have fixed under warranty. The law recognizes that at some point — after enough failed repair attempts — the consumer is entitled to their money back rather than continued promises that the problem will be resolved. The exact threshold varies by state, but the basic structure is the same across all state lemon laws and under the federal Magnuson-Moss Warranty Act.</p>
+
+  <h3>Qualification Thresholds</h3>
+  <p>Most state lemon laws use one of three qualification tests, and the vehicle qualifies if any one is met:</p>
+  <ul>
+    <li><strong>Repair attempts (same defect):</strong> The same substantial defect has persisted after 3–4 repair attempts (most states). Some states use 2 attempts for safety defects. California specifically allows 4 for non-safety defects, 2 for safety defects.</li>
+    <li><strong>Days out of service:</strong> The vehicle has been out of service for 30 or more cumulative days for warranty repairs, regardless of whether multiple separate issues were involved.</li>
+    <li><strong>Combination:</strong> Some states combine the above tests or have additional triggering conditions.</li>
+  </ul>
+
+  <h3>The Refund Formula</h3>
+  <p>When a vehicle qualifies for repurchase under state lemon law, the refund amount is typically calculated as:</p>
+  <p><strong>Refund = Purchase Price + Incidental Costs &minus; Mileage Offset</strong></p>
+  <p>The mileage offset deducts the value of the miles you drove before the defect first appeared, based on the state&rsquo;s assumed useful life formula. California uses 120,000 miles as the denominator: if you drove 10,000 miles before the defect arose on a $40,000 vehicle, the offset is (10,000 &divide; 120,000) &times; $40,000 = $3,333. Incidental costs — sales tax, registration fees, finance charges, rental car costs — are added back to the refund in most states.</p>
+
+  <h3>Attorney Fees: The Provision That Changes Everything</h3>
+  <p>The provision that makes lemon law uniquely accessible is mandatory attorney fee shifting. In virtually every state lemon law and under Magnuson-Moss, if the consumer prevails, the manufacturer must pay the consumer&rsquo;s attorney fees and costs. This means consumers can hire specialized lemon law attorneys without paying out of pocket — the attorney is paid by the manufacturer at the conclusion of a successful case. Lemon law attorneys work on this fee-shifting basis and only take cases they believe will succeed. This aligns their incentives with the consumer and makes legal representation economically rational even for lower-value claims.</p>
+
+  <h2>Documenting Your Claim</h2>
+  <p>The foundation of any lemon law claim is the repair order: the written record from each dealer visit that documents what the consumer complained about and what the dealer found or did. To build a strong lemon law record, you need repair orders that: clearly identify the defect you complained about (describe it specifically — "engine stalls at highway speeds" rather than just "vehicle runs rough"); show the date and mileage at each visit; and reflect the same defect appearing across multiple visits. Request a copy of the repair order at every visit — you have a legal right to it. Keep them organized.</p>
+  <p>If the dealer writes vague or minimizing descriptions of your complaint, ask them to correct it before you sign or accept the repair order. The repair order is your primary evidence, and its accuracy matters.</p>
+
+  <h2>Learn More</h2>
+  <ul>
+    <li><a href="/guides/how-lemon-law-works">How lemon law works</a></li>
+    <li><a href="/guides/lemon-law-by-state">Lemon law by state</a></li>
+    <li><a href="/guides/what-to-do-with-a-lemon">What to do with a lemon</a></li>
+    <li><a href="/guides/lemon-law-misconceptions">Common misconceptions</a></li>
+    <li><a href="/case-types">Types of lemon law claims</a></li>
+    <li><a href="/methodology">Calculator methodology</a></li>
+    <li><a href="/faq">Frequently asked questions</a></li>
+  </ul>
+
   <script>
     document.getElementById('calc').addEventListener('submit', e => {
       e.preventDefault();

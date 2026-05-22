@@ -1,16 +1,70 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 const title = 'Lemon Law by State | lemonlawcalc.com';
-const description = 'State-by-state overview of lemon law thresholds, coverage periods, mileage offsets, and key differences in California, Texas, New York, and Florida.';
+const description = 'State-by-state comparison of lemon law thresholds, coverage periods, mileage offset formulas, and civil penalty provisions — California, New York, Texas, Florida, and federal Magnuson-Moss.';
 ---
 <BaseLayout title={title} description={description}>
   <h1>Lemon Law by State</h1>
-  <p><em>Reviewed by Aspen Lockwood (AL), Editor-in-Chief. Updated May 2026.</em></p>
-  <h2>California (strongest protections)</h2><p>Song-Beverly Consumer Warranty Act. Coverage: 18 months or 18,000 miles from delivery. Repair attempts: 2 for safety defects, 4 for others, or 30 days out of service. Civil penalty up to 2× actual damages for willful violations. No mandatory arbitration before suing.</p>
-  <h2>New York</h2><p>Coverage: 2 years or 18,000 miles. Repair attempts: 4 for same defect, or 30 days out of service. Strong attorney fee provision. One of the more plaintiff-friendly states in the Northeast.</p>
-  <h2>Texas</h2><p>Coverage: 24 months or 24,000 miles. Must first go through manufacturer&rsquo;s dispute resolution program. Attorney fees available. More procedural hurdles than California or New York.</p>
-  <h2>Florida</h2><p>Coverage: 24 months from delivery, or during the Lemon Law Rights Period (first 24 months). Repair attempts: 3 for same defect (with notice to manufacturer), or 30 days out of service. Mandatory arbitration in some cases.</p>
-  <h2>Federal: Magnuson-Moss</h2><p>Available in all states as a supplement to state lemon law. Covers any product sold with a written warranty. Attorney fees mandatory for prevailing plaintiffs. No minimum repair attempt requirement — just a breach of warranty. Useful for used vehicles outside state lemon law periods.</p>
-  <h2>Where to go from here</h2>
-  <p>See <a href="/guides/how-lemon-law-works">how lemon law works</a> and <a href="/guides/what-to-do-with-a-lemon">what to do with a lemon</a>.</p>
+  <p><em>Reviewed by Elodie Sark (ES), Editor-in-Chief &mdash; Consumer Protection & Lemon Law Practice. Updated May 2026.</em></p>
+
+  <p>State lemon laws share the same basic framework — substantial defect, reasonable repair attempts, repurchase or replacement remedy — but differ in important ways that significantly affect both eligibility and recovery. The differences include: the coverage period (how long after purchase you can assert rights), repair attempt thresholds (how many attempts are required for different defect types), mileage offset formulas (how much is deducted from the refund), arbitration requirements (whether manufacturer arbitration must precede suit), and civil penalty provisions (whether willful violations result in additional damages). Below are the key differences in the major lemon law states and under the federal Magnuson-Moss standard.</p>
+
+  <h2>California — Song-Beverly Consumer Warranty Act</h2>
+  <p>California&rsquo;s Song-Beverly Consumer Warranty Act (California Civil Code &sect;&sect; 1790 et seq.) is the most consumer-protective state lemon law in the country and serves as the reference model for national comparison. Key provisions:</p>
+  <ul>
+    <li><strong>Coverage period:</strong> Within the warranty period — but the California lemon law creates a rebuttable presumption of a lemon if thresholds are met within 18 months or 18,000 miles from delivery (whichever occurs first).</li>
+    <li><strong>Repair attempt threshold:</strong> 2 repair attempts for safety defects likely to cause death or serious injury; 4 repair attempts for the same non-safety defect; or 30 cumulative days out of service for warranty repairs.</li>
+    <li><strong>Mileage offset:</strong> (Miles before first repair report &divide; 120,000) &times; Purchase Price. California uses 120,000 miles as the assumed useful life denominator.</li>
+    <li><strong>Arbitration:</strong> Optional for the consumer — no mandatory manufacturer arbitration before suing. Consumers can go directly to court.</li>
+    <li><strong>Civil penalty:</strong> Up to 2&times; actual damages if the manufacturer willfully failed to comply with its repurchase obligations. This is a significant additional remedy unique to California among major lemon law states.</li>
+    <li><strong>Leased vehicles:</strong> Explicitly covered. Remedy is lease cancellation plus refund of all payments and fees, minus mileage offset.</li>
+    <li><strong>Attorney fees:</strong> Mandatory for prevailing consumers.</li>
+  </ul>
+  <p>California&rsquo;s lack of mandatory pre-suit arbitration and its civil penalty provision make it the most aggressive state for lemon law plaintiffs. Manufacturers tend to settle California lemon law cases at higher rates and earlier than in other states because the downside risk (civil penalty plus mandatory attorney fees) is substantial.</p>
+
+  <h2>New York — New Car Lemon Law</h2>
+  <p>New York&rsquo;s lemon law (N.Y. Gen. Bus. Law &sect; 198-a) covers new vehicles and is among the stronger plaintiff-friendly lemon law statutes in the Northeast:</p>
+  <ul>
+    <li><strong>Coverage period:</strong> 2 years or 18,000 miles from original delivery, whichever occurs first.</li>
+    <li><strong>Repair attempt threshold:</strong> 4 repair attempts for the same defect, or 30 cumulative days out of service.</li>
+    <li><strong>Mileage offset:</strong> New York uses a different formula: the offset is calculated based on the mileage at the time the consumer first reports the defect divided by 100,000 miles (not 120,000 as in California). A slightly more generous offset formula for the consumer in some cases.</li>
+    <li><strong>Arbitration:</strong> New York has an informal dispute settlement procedure (New York State Dispute Settlement Program). Consumers should understand the program&rsquo;s limitations before choosing it over direct legal action.</li>
+    <li><strong>Attorney fees:</strong> Available in court actions. The attorney fee provision makes litigation economically accessible.</li>
+    <li><strong>Used vehicles:</strong> A separate New York Used Car Lemon Law covers used vehicles sold by dealers with fewer than 36,000 miles.</li>
+  </ul>
+
+  <h2>Texas — Lemon Law</h2>
+  <p>Texas lemon law (Texas Occupations Code Chapter 2301) covers vehicles purchased in Texas for primarily personal use and has a more procedurally complex structure than California or New York:</p>
+  <ul>
+    <li><strong>Coverage period:</strong> 24 months or 24,000 miles from original delivery, whichever occurs first.</li>
+    <li><strong>Repair attempt threshold:</strong> 4 repair attempts for the same defect, or 30 cumulative days out of service — but the consumer must first give the manufacturer a reasonable opportunity to repair before asserting lemon law rights.</li>
+    <li><strong>Mandatory arbitration:</strong> Texas requires consumers to first attempt to resolve the dispute through the manufacturer&rsquo;s approved dispute resolution program before filing a complaint with the Texas DMV. The DMV complaint process precedes court litigation. This adds procedural steps not present in California.</li>
+    <li><strong>Attorney fees:</strong> Available in court actions, consistent with the national standard.</li>
+    <li><strong>Remedy:</strong> Repurchase at contract price minus reasonable use offset, or replacement with comparable vehicle.</li>
+  </ul>
+  <p>The mandatory arbitration requirement in Texas makes the claim process longer and adds procedural complexity. Consumers who have not yet initiated the manufacturer&rsquo;s dispute resolution program should do so promptly after meeting the repair attempt threshold.</p>
+
+  <h2>Florida — Lemon Law Rights Period</h2>
+  <p>Florida&rsquo;s lemon law (Fla. Stat. &sect; 681.10 et seq.) covers vehicles during a specific "Lemon Law Rights Period":</p>
+  <ul>
+    <li><strong>Coverage period:</strong> The first 24 months from original delivery of the vehicle to the consumer.</li>
+    <li><strong>Repair attempt threshold:</strong> 3 repair attempts for the same defect (with written notice to the manufacturer after the second attempt), or 30 cumulative days out of service during the Lemon Law Rights Period.</li>
+    <li><strong>Notice requirement:</strong> Florida specifically requires written notice to the manufacturer after the second repair attempt for the same defect, giving the manufacturer one final opportunity to repair before the third qualifying attempt. Failing to provide this notice can affect the claim.</li>
+    <li><strong>Arbitration:</strong> If the manufacturer participates in a state-certified dispute resolution program, the consumer may be required to use it before seeking other remedies.</li>
+    <li><strong>Remedy:</strong> Repurchase at the full purchase price plus collateral charges, minus a use offset based on mileage driven before the first repair attempt divided by 120,000.</li>
+    <li><strong>Attorney fees:</strong> Available for prevailing consumers in civil actions.</li>
+  </ul>
+
+  <h2>Federal — Magnuson-Moss Warranty Act</h2>
+  <p>The Magnuson-Moss Warranty Act (15 U.S.C. &sect;&sect; 2301&ndash;2312) provides federal warranty rights that supplement state lemon law in every state and extend protection to situations state lemon laws may not cover. Key features:</p>
+  <ul>
+    <li><strong>Coverage:</strong> Any consumer product — including vehicles — sold with a written warranty. This includes used vehicles still under the manufacturer&rsquo;s original warranty, which state lemon laws typically do not cover.</li>
+    <li><strong>No specific repair attempt threshold:</strong> Magnuson-Moss requires only that the consumer give the manufacturer a reasonable opportunity to remedy the breach of warranty. What constitutes "reasonable" is fact-specific and typically far fewer attempts than state lemon law thresholds.</li>
+    <li><strong>Remedy:</strong> Actual damages (repair costs, diminution in value, incidentals) plus attorney fees. Does not require repurchase but can result in substantial damages for breach of warranty.</li>
+    <li><strong>Attorney fees:</strong> Mandatory for prevailing plaintiffs under 15 U.S.C. &sect; 2310(d)(2), making federal litigation economically accessible even for moderate-value claims.</li>
+    <li><strong>Federal court jurisdiction:</strong> Claims exceeding $50,000 can be filed in federal district court, providing an alternative forum with broader discovery and potentially different jury pools than state court.</li>
+  </ul>
+  <p>Magnuson-Moss is most valuable for: used vehicles with remaining manufacturer warranty; vehicles outside the state lemon law coverage period (beyond 24 months or 24,000 miles); and as a parallel federal claim filed alongside state lemon law in new vehicle cases, expanding the damages exposure the manufacturer faces.</p>
+
+  <p>Return to the <a href="/guides/how-lemon-law-works">how lemon law works guide</a>, the <a href="/guides/what-to-do-with-a-lemon">what to do guide</a>, or the <a href="/">calculator</a>.</p>
 </BaseLayout>

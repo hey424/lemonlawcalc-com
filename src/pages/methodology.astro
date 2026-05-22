@@ -1,12 +1,42 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'Methodology | lemonlawcalc.com';
-const description = 'How the lemon law calculator estimates refunds: mileage offset calculation, qualification thresholds, and outcome types.';
+const description = 'How the lemon law calculator estimates refunds and recoveries — mileage offset formulas, qualification thresholds, outcome adjustments, and what the calculator cannot model.';
 ---
 <BaseLayout title={title} description={description}>
   <h1>Methodology</h1>
-  <p><em>Reviewed by Aspen Lockwood (AL), Editor-in-Chief. Updated May 2026.</em></p>
-  <h2>Mileage offset</h2><p>Using California&rsquo;s formula as the base: (miles driven before defect arose / 120,000) × purchase price. This is the most common formula; some states use different denominators or no offset at all. The calculator uses current mileage minus purchase mileage as a proxy for pre-defect miles.</p>
-  <h2>Qualification thresholds</h2><p>Calculator applies the most common state standards: 3+ repair attempts for major defects, 1+ for safety defects, or 30+ days out of service. If none of these thresholds are met, the calculator flags that the vehicle may not qualify yet.</p>
-  <h2>Outcome adjustments</h2><p>Refund: purchase price minus mileage offset (±15% range for state law variation). Replacement: ~95% of purchase price (manufacturers may offer slightly less valuable replacement). Cash settlement: ~60% of net refund basis (cash settlements are typically discounted vs. full repurchase).</p>
+  <p><em>Reviewed by Elodie Sark (ES), Editor-in-Chief &mdash; Consumer Protection & Lemon Law Practice. Updated May 2026.</em></p>
+
+  <p>This page documents how the lemon law calculator produces its estimates. Every input variable, every formula, and every assumption is disclosed here. Lemon law recovery amounts are governed primarily by state statute, and because the laws differ in important ways across states, the calculator uses the most common statutory formulas as its base while disclosing where state variation is material.</p>
+
+  <h2>Step 1: Qualification Check</h2>
+  <p>Before calculating a recovery estimate, the calculator checks whether the vehicle appears to meet the qualification thresholds required by most state lemon laws. These thresholds are the minimum conditions that must be met before the consumer can demand a repurchase or replacement. The most common thresholds — applied across the majority of U.S. states — are:</p>
+  <ul>
+    <li><strong>3 or more repair attempts for the same non-safety defect</strong> (some states set this at 4 attempts; a few at 2)</li>
+    <li><strong>1 or more repair attempts for a safety defect</strong> (some states require 2; California specifically allows 2 for safety defects before the presumption arises)</li>
+    <li><strong>30 or more cumulative days out of service</strong> for warranty repairs, regardless of how many separate issues were involved</li>
+  </ul>
+  <p>If none of these thresholds are met, the calculator flags the situation as potentially not yet qualifying and encourages the consumer to continue documenting repair visits. Meeting the threshold does not automatically trigger a buyback — it triggers the legal right to demand one, which the consumer must then assert (typically through counsel).</p>
+
+  <h2>Step 2: Mileage Offset Calculation</h2>
+  <p>The mileage offset is the deduction applied to the purchase price to account for the miles of useful life the consumer has already received from the vehicle. Almost all state lemon laws allow manufacturers to deduct this offset from the repurchase price. The formula the calculator uses is based on California&rsquo;s Song-Beverly Consumer Warranty Act — the most commonly cited and modeled formula in lemon law practice:</p>
+  <p><strong>Mileage Offset = (Miles Driven / 120,000) × Purchase Price</strong></p>
+  <p>"Miles driven" is calculated as the current mileage minus the purchase mileage. Some states use a different divisor (e.g., 100,000 miles in some states; unlimited in others that do not allow any offset). The California 120,000-mile denominator is used here as a common reference point; actual offset will vary by state. States with no mileage offset (which would produce a 100% full refund) include some variants of specific statutory programs.</p>
+  <p>The repurchase base is: Purchase price minus mileage offset. Additionally, most states require the manufacturer to refund incidental costs directly associated with the defect: finance charges (interest paid on an auto loan), registration fees, taxes paid at purchase, and sometimes documented costs for rental vehicles or towing. The calculator uses the purchase price minus offset as the primary refund figure; incidental costs are noted but not modeled separately given their high variability.</p>
+
+  <h2>Step 3: Outcome Type Adjustments</h2>
+  <p>The calculator adjusts the estimate based on the desired outcome type:</p>
+  <ul>
+    <li><strong>Full refund (repurchase):</strong> The purchase price minus the mileage offset, representing the statutory repurchase amount. A ±15% range is applied to reflect the variation in how different states handle the refund formula, what incidentals are included, and how the parties calculate the offset amount in practice.</li>
+    <li><strong>Replacement vehicle:</strong> Modeled at approximately 95% of the original purchase price. Manufacturers generally offer a comparable replacement vehicle, but the replacement may not be identical to the original in equipment or features, and some states allow manufacturers to credit the consumer with the current model-year equivalent rather than the exact original specification. The 5% discount from purchase price approximates this typical variation.</li>
+    <li><strong>Cash settlement:</strong> Modeled at approximately 60% of the net refund basis. Cash settlements — where the consumer accepts a monetary payment to resolve the claim without a full repurchase — are typically discounted relative to the full refund because they represent a negotiated resolution that avoids the cost and uncertainty of arbitration or litigation. Settlement amounts vary widely based on the strength of the case, the manufacturer&rsquo;s internal policies, and the parties&rsquo; respective negotiating positions.</li>
+  </ul>
+
+  <h2>Step 4: Output Range</h2>
+  <p>The calculator outputs a low-to-high range by applying a band of 85% (low end) to 110% (high end) around the point estimate for refund and replacement cases. This range reflects the variation in how states calculate mileage offsets, what incidental costs are included, and the negotiating dynamics of the claim resolution process. Cash settlement estimates carry wider inherent variance and are disclosed as approximations rather than a tight range.</p>
+
+  <h2>What the Calculator Does Not Model</h2>
+  <p>The calculator does not estimate: attorney fees (which are separately recoverable from the manufacturer in virtually all state lemon law cases and under Magnuson-Moss); civil penalties for willful violations (California&rsquo;s Song-Beverly Act allows up to 2× actual damages for willful violations — a significant additional recovery that is not modeled here); incidental damages such as rental car costs, towing expenses, and finance charges during the out-of-service period; the value of a lease lemon law claim (which follows a different formula than purchase claims); or Magnuson-Moss Warranty Act recovery in cases involving used vehicles with written warranties. State-specific variations in the mileage offset formula, coverage periods, and repair threshold numbers are also not individually modeled — the calculator uses the most common defaults.</p>
+
+  <p>Return to the <a href="/">calculator</a> or see the <a href="/guides/how-lemon-law-works">how lemon law works guide</a>.</p>
 </BaseLayout>

@@ -1,18 +1,57 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'FAQ | lemonlawcalc.com';
-const description = 'Frequently asked questions about lemon law claims: what qualifies, repair attempts, mileage offsets, and attorney fees.';
+const description = 'Frequently asked questions about lemon law claims — what qualifies as a substantial defect, repair attempt thresholds, mileage offsets, used vehicles, attorney fees, and the claims process.';
 ---
 <BaseLayout title={title} description={description}>
   <h1>Frequently Asked Questions</h1>
-  <h2>What counts as a &ldquo;substantial defect&rdquo;?</h2>
-  <p>A defect that significantly impairs the vehicle&rsquo;s use, value, or safety — not a minor cosmetic issue. Examples: engine problems, transmission failures, braking issues, electrical system failures, and air conditioning failures in hot climates. Cosmetic defects and defects caused by owner misuse are generally excluded.</p>
-  <h2>How many repair attempts are required?</h2>
-  <p>Varies by state. Common thresholds: 3–4 attempts for the same non-safety defect; 1–2 attempts for safety-related defects; or 30 cumulative days out of service (regardless of the number of separate issues). Some states use a combination of these tests.</p>
-  <h2>What is the mileage offset?</h2>
-  <p>The refund for a lemon law repurchase is not always 100% of the purchase price. Most states deduct a mileage offset for miles driven before the defect first arose. California uses a formula: (miles before defect / 120,000) × purchase price. Some states do not allow mileage offsets.</p>
-  <h2>Are used vehicles covered?</h2>
-  <p>State lemon laws typically cover new vehicles. Used vehicle coverage varies: some states cover certified pre-owned vehicles still under the original manufacturer&rsquo;s warranty; others do not. The federal Magnuson-Moss Warranty Act may provide additional rights for used vehicles sold with written warranties.</p>
-  <h2>Do I need to hire an attorney?</h2>
-  <p>Most state lemon laws require manufacturers to pay the consumer&rsquo;s attorney fees if the consumer wins. This means you can hire a lemon law attorney at no out-of-pocket cost in most successful cases. Attorneys who specialize in lemon law typically take cases on a fee-shifting basis, not contingency.</p>
+  <p><em>Reviewed by Elodie Sark (ES), Editor-in-Chief &mdash; Consumer Protection & Lemon Law Practice. Updated May 2026.</em></p>
+
+  <h2>What counts as a "substantial defect" under lemon law?</h2>
+  <p>A substantial defect is one that significantly impairs the vehicle&rsquo;s use, value, or safety — not a minor cosmetic issue or a trivial inconvenience. The impairment must go to the vehicle&rsquo;s core function or safety systems. Examples of defects that have consistently been found substantial: engine defects (stalling, misfires, oil leaks, failure to start); transmission failures or slipping; brake system problems; electrical system failures that affect multiple systems; power steering failures; and air conditioning failures (particularly in states with hot climates, where courts have found AC failures to be substantial impairments to the vehicle&rsquo;s intended use).</p>
+  <p>Defects that generally do not meet the substantial threshold: minor trim or paint issues; small interior rattles that do not affect vehicle operation; seat adjustment problems that do not affect driving; and defects entirely caused by the consumer&rsquo;s misuse of the vehicle. Most state lemon laws require the defect to be covered by the manufacturer&rsquo;s warranty — defects caused by accidents, flood damage, or unauthorized modifications are excluded.</p>
+  <p>The "substantial" determination is often contested in lemon law cases. Manufacturers frequently argue that a recurring defect is minor or does not impair use or value. The consumer&rsquo;s best evidence of substantiality is a combination of the repair orders (which document what the dealer found wrong), the consumer&rsquo;s own written complaints describing how the defect affects use, and expert testimony where the defect is technical or disputed.</p>
+
+  <h2>How many repair attempts are required before I have a lemon law claim?</h2>
+  <p>The repair attempt threshold varies by state, but the most common standards are:</p>
+  <ul>
+    <li><strong>California (Song-Beverly):</strong> 4 repair attempts for the same non-safety defect within the warranty period, or 2 repair attempts for a defect that is likely to cause death or serious bodily injury. The vehicle must also have been purchased or used primarily for personal use.</li>
+    <li><strong>New York:</strong> 4 repair attempts for the same defect, or 30 cumulative days out of service.</li>
+    <li><strong>Texas:</strong> Must complete the manufacturer&rsquo;s dispute resolution process first. After that, 4 repair attempts for the same defect or 30 days out of service during the first 24 months or 24,000 miles.</li>
+    <li><strong>Florida:</strong> 3 repair attempts for the same defect (with written notice to the manufacturer after the second attempt), or 30 cumulative days out of service during the lemon law rights period (first 24 months from delivery).</li>
+    <li><strong>Federal Magnuson-Moss:</strong> No specific repair attempt threshold — just an unremedied breach of written warranty after a reasonable opportunity to repair. What constitutes a "reasonable opportunity" is fact-specific, but courts have found it met in many fewer attempts than state lemon laws require.</li>
+  </ul>
+  <p>These are the threshold numbers needed to trigger the statutory presumption — in some states this creates a rebuttable presumption that the vehicle is a lemon, while in others it triggers the manufacturer&rsquo;s obligation to repurchase or replace. Document every repair visit with a repair order, and note every time you describe the defect to the dealer.</p>
+
+  <h2>What is the mileage offset and how is it calculated?</h2>
+  <p>The mileage offset is a deduction from the refund amount representing the miles of useful life the consumer has already received from the vehicle before the defect first manifested. The theory is that a consumer who drove 10,000 miles before the defect arose has received 10,000 miles of benefit that the manufacturer should not have to refund. Most (but not all) states allow manufacturers to deduct this offset.</p>
+  <p>California&rsquo;s formula — the most widely used model: Mileage Offset = (Miles driven before first report of defect ÷ 120,000) × Purchase price. If you drove 10,000 miles before first reporting the defect on a $40,000 vehicle: (10,000 ÷ 120,000) × $40,000 = $3,333 offset, leaving a $36,667 refund base. The 120,000-mile denominator represents California&rsquo;s assumed useful life for a vehicle. Some states use different denominators (lower numbers result in larger offsets; some states have no offset at all). A few states use the mileage at first repair attempt rather than first report of the defect, which can be significant if the defect went unreported for a period.</p>
+
+  <h2>Are used vehicles covered by lemon law?</h2>
+  <p>State lemon laws typically cover new vehicles purchased or leased from a manufacturer&rsquo;s authorized dealer. Coverage for used vehicles under state lemon laws varies significantly:</p>
+  <ul>
+    <li><strong>Certified pre-owned vehicles:</strong> Some states extend lemon law coverage to CPO vehicles that are still covered by the original manufacturer&rsquo;s warranty. Check your specific state&rsquo;s statute.</li>
+    <li><strong>Used vehicles with remaining manufacturer warranty:</strong> A used vehicle that still has time remaining on the original manufacturer&rsquo;s factory warranty may be covered by the Magnuson-Moss Warranty Act for breach of that warranty — even if the state lemon law applies only to new vehicles. Magnuson-Moss allows attorney fees for prevailing plaintiffs, making it economically viable.</li>
+    <li><strong>"As-is" sales:</strong> Vehicles sold without any warranty — typically at dealerships as "as-is" or from private parties — have limited protection under either state lemon law or Magnuson-Moss, because the warranty coverage is the foundation of both claims.</li>
+  </ul>
+  <p>If you purchased a used vehicle with significant defects, a lemon law attorney can evaluate whether any warranty coverage applies and what claims are available under both state law and federal law.</p>
+
+  <h2>Do I need to hire an attorney, and what does it cost?</h2>
+  <p>Virtually all state lemon laws include mandatory attorney fee provisions: if you prevail in a lemon law claim, the manufacturer must pay your attorney&rsquo;s fees and costs. This is the feature that makes lemon law uniquely accessible to consumers — you can hire a specialized lemon law attorney without any out-of-pocket legal fees. Lemon law attorneys typically agree to represent clients on a fee-shifting basis: they only get paid if you win, and when you do, the manufacturer pays the fees directly to the attorney.</p>
+  <p>Because of this fee structure, lemon law attorneys have strong incentives to evaluate cases carefully and only take those with a reasonable prospect of success. If an attorney agrees to represent you, that itself signals that they believe your case has merit. Many lemon law attorneys offer free initial consultations where they evaluate your repair documentation and advise on whether you meet the threshold requirements. The Magnuson-Moss Warranty Act also includes mandatory attorney fee provisions for prevailing plaintiffs, extending the same economic access to federal warranty claims.</p>
+
+  <h2>What is manufacturer arbitration, and do I have to use it?</h2>
+  <p>Many manufacturers operate state-certified dispute resolution programs (often administered by organizations like BBB Auto Line or AUTOCAP) that offer arbitration as an alternative to litigation. Whether you must use manufacturer arbitration before filing a lemon law lawsuit depends on your state:</p>
+  <ul>
+    <li><strong>California:</strong> Manufacturer arbitration is optional for the consumer. You may go directly to court without first participating in manufacturer-sponsored arbitration. Courts have held that arbitration requirements cannot be imposed on California lemon law plaintiffs.</li>
+    <li><strong>Texas:</strong> Consumers must complete the manufacturer&rsquo;s dispute resolution process before filing a lemon law claim with the Texas DMV or in court.</li>
+    <li><strong>Florida:</strong> If the manufacturer has a certified arbitration program, the consumer may be required to participate before filing suit. Arbitration results are not binding on the consumer (they can reject the arbitration decision and proceed to court).</li>
+    <li><strong>Most other states:</strong> Arbitration may be offered or encouraged but is not a mandatory prerequisite to filing suit. Check your state&rsquo;s specific rules.</li>
+  </ul>
+  <p>Important: never sign anything waiving your right to a court trial as a condition of using manufacturer arbitration. The arbitration process is supposed to be an additional option, not a binding replacement for your statutory rights.</p>
+
+  <h2>What if the manufacturer says my defect is "normal operating characteristics"?</h2>
+  <p>This is one of the most common manufacturer defenses in lemon law cases: claiming that what the consumer perceives as a defect is actually within the normal operating specifications of the vehicle. Manufacturers often make this argument for vibration, noise, minor hesitation, and temperature-related characteristics. To counter it, consumers need to: present repair orders that document the dealer&rsquo;s own findings (not just the consumer&rsquo;s complaint); consult an independent mechanic or automotive expert who can testify that the condition exceeds normal operating tolerances; and, in some cases, reference Technical Service Bulletins (TSBs) that the manufacturer has issued acknowledging a known defect with that model. TSBs are publicly available through the National Highway Traffic Safety Administration (NHTSA) database and can be powerful evidence that the manufacturer was aware of a systemic problem that it characterized internally as a defect.</p>
+
+  <p>See the <a href="/guides/how-lemon-law-works">how lemon law works guide</a>, the <a href="/guides/lemon-law-by-state">state-by-state guide</a>, or return to the <a href="/">calculator</a>.</p>
 </BaseLayout>
