@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadCapture from '../components/LeadCapture.astro';
 const title = 'Lemon Law Calculator | lemonlawcalc.com';
 const description = 'Estimate your lemon law refund, repurchase value, or replacement value for a defective vehicle under state lemon law or federal Magnuson-Moss. Free, informational.';
 ---
@@ -34,7 +35,10 @@ const description = 'Estimate your lemon law refund, repurchase value, or replac
     </select>
     <button type="submit">Estimate recovery</button>
   </form>
-  <p id="result" aria-live="polite"></p>
+  
+
+  <LeadCapture caseType="lemon_law" caseTypeLabel="Lemon Law" />
+<p id="result" aria-live="polite"></p>
 
   <h2>How Lemon Law Claims Work</h2>
   <p>Lemon law gives consumers a legal remedy when a manufacturer cannot fix a substantial defect in a vehicle that the consumer is entitled to have fixed under warranty. The law recognizes that at some point — after enough failed repair attempts — the consumer is entitled to their money back rather than continued promises that the problem will be resolved. The exact threshold varies by state, but the basic structure is the same across all state lemon laws and under the federal Magnuson-Moss Warranty Act.</p>
@@ -61,13 +65,13 @@ const description = 'Estimate your lemon law refund, repurchase value, or replac
 
   <h2>Learn More</h2>
   <ul>
-    <li><a href="/guides/how-lemon-law-works">How lemon law works</a></li>
-    <li><a href="/guides/lemon-law-by-state">Lemon law by state</a></li>
-    <li><a href="/guides/what-to-do-with-a-lemon">What to do with a lemon</a></li>
-    <li><a href="/guides/lemon-law-misconceptions">Common misconceptions</a></li>
-    <li><a href="/case-types">Types of lemon law claims</a></li>
-    <li><a href="/methodology">Calculator methodology</a></li>
-    <li><a href="/faq">Frequently asked questions</a></li>
+    <li><a href="/guides/how-lemon-law-works/">How lemon law works</a></li>
+    <li><a href="/guides/lemon-law-by-state/">Lemon law by state</a></li>
+    <li><a href="/guides/what-to-do-with-a-lemon/">What to do with a lemon</a></li>
+    <li><a href="/guides/lemon-law-misconceptions/">Common misconceptions</a></li>
+    <li><a href="/case-types/">Types of lemon law claims</a></li>
+    <li><a href="/methodology/">Calculator methodology</a></li>
+    <li><a href="/faq/">Frequently asked questions</a></li>
   </ul>
 
   <script>
